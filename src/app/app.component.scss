@@ -1,0 +1,11 @@
+@import '~styles/variables';
+:host ::ng-deep {
+    virtual-scroll,
+    [virtualScroll] {
+        overflow: hidden;
+        overflow-y: auto;
+        border: 1px solid $border-color;
+        height: 75vh;
+        display: block;
+    }
+}

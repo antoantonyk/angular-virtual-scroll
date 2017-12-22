@@ -1,20 +1,39 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div id="layout" class="pure-g">
+  <div class="content pure-u-1 pure-u-md-2-4">
+    <div class="posts" id="samples">
+      <h1 class="content-subhead">Samples</h1>
+      <section class="post">
+        <header class="post-header">
+          <h2 class="post-title">
+            <span>Live</span> Samples</h2>
+        </header>
+        <div class="post-description">
+          <h2>With
+            <span>Single Column</span>
+          </h2>
+          <app-vertical-list [items]="items"></app-vertical-list>
 
+          <h2>With
+            <span>Multiple Columns</span>
+          </h2>
+          <app-multi-col-list [items]="items"></app-multi-col-list>
+
+          <h2>With
+            <span>Table</span>
+          </h2>
+          <app-table-list [items]="items"></app-table-list>
+
+          <h2>Loading in
+            <span>Chunks</span>
+          </h2>
+          <app-list-with-api [items]="items"> </app-list-with-api>
+          <p>
+            <strong>change</strong> event is fired every time start or end index change. You could use this to load more items at
+            the end of the scroll. See below.
+          </p>
+          <pre><code class="javascript">{{codeListWithApi}}</code></pre>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

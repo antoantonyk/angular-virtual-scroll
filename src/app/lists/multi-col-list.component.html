@@ -1,0 +1,23 @@
+<button (click)="sortByName()">
+  Sort By Name</button>
+<button (click)="sortByIndex()">Sort By Index</button>
+<button (click)="reduceListToEmpty()">Reduce to 0 Items</button>
+<button (click)="reduceList()">Reduce to 100 Items</button>
+<button (click)="setToFullList()">Revert to 1000 Items</button>
+<button (click)="scrollTo()">Scroll to 50</button>
+
+<div class="status">
+  Showing
+  <span class="badge">{{indices?.start + 1}}</span>
+  -
+  <span class="badge">{{indices?.end}}</span>
+  of
+  <span class="badge">{{filteredList?.length}}</span>
+  <span>({{scrollItems?.length}} nodes)</span>
+</div>
+
+<div virtualScroll [items]="filteredList" (update)="scrollItems = $event" (change)="indices = $event">
+
+  <app-list-item *ngFor="let item of scrollItems" [item]="item"> </app-list-item>
+
+</div>
